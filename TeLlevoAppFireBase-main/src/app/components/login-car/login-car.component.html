@@ -1,0 +1,13 @@
+<form (ngSubmit)="login()">
+  2  <ion-item>
+  3    <ion-label position="floating">email </ion-label>
+  4    <ion-input type="email" [(ngModel)]="email" name="email">email</ion-input>
+  5  </ion-item>
+  6  <ion-item>
+  7    <ion-label position="floating">password </ion-label>
+  8    <ion-input type="password" [(ngModel)]="password" name="password">email</ion-input>
+  9  </ion-item>
+  10  <ion-button expand="full" color="warning" type="submit">Login</ion-button>
+  11</form>
+  12<br>
+  13<ion-button color="danger" expand="full" (click)="register()">registrar</ion-button>

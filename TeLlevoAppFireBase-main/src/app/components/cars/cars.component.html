@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Listado de Autos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let car of cars">
+      <ion-card>
+        <img alt="Silhouette of mountains" [src]="car.imagenUrl" />
+        <ion-card-header>
+          <ion-card-title>Modelo: {{ car.nombre }}</ion-card-title>
+          <ion-card-subtitle>El año del vehículo: {{ car.year }}</ion-card-subtitle>
+          <ion-card-subtitle>Patente: {{ car.patente }}</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" color="primary" [routerLink]="['/listar-carros']">Ver Autos</ion-button>
+</ion-content>
+
